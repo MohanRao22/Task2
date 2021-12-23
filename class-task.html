@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+</head>
+<body>
+    
+    <script>
+        const scores = [
+  {
+    marks: 32,
+    name: "Yvette Merritt"
+  },
+  {
+    marks: 57,
+    name: "Lillian Ellis"
+  },
+  {
+    marks: 22,
+    name: "Mccall Carter"
+  },
+  {
+    marks: 21,
+    name: "Pate Collier"
+  },
+  {
+    marks: 91,
+    name: "Debra Beard"
+  },
+  {
+    marks: 75,
+    name: "Nettie Hancock"
+  },
+  {
+    marks: 20,
+    name: "Hatfield Hodge"
+  }
+];
+
+/***
+Task 1 : Print the name list - As an array
+***/
+var scoreArray = [];
+for(score of scores){
+    scoreArray.push(score.name);
+   }
+console.log(scoreArray);
+
+
+/***
+Task 2 :  >=40 pass..
+***/
+
+var passStudents = scores.filter(function(ele){
+     if(ele.marks>=40){
+      return ele.marks;
+     }
+});
+console.log(passStudents);
+
+
+/***
+Task 3 :   Find all the names who failed the exams (Array methods)
+***/
+var fail = [];
+scores.filter((ele)=> {
+          if(ele.marks < 40){
+           return fail.push(ele["name"]);
+          }
+});
+console.log(fail);
+
+
+// [32, 57, 22]
+// Task 1
+// Print the name list - As an array
+// Expected Output
+// ["Yvette Merritt", "Lillian Ellis", "Mccall Carter", "Pate Collier" ,
+//  "Debra Beard", "Nettie Hancock",  "Hatfield Hodge"]
+
+// Task 2
+// >=40 pass.. find those student that passed (Use array method)
+// Expected Output
+// [{
+//     marks: 57,
+//     name: "Lillian Ellis"
+//   },
+//     {
+//     marks: 91,
+//     name: "Debra Beard"
+//   },
+//   {
+//     marks: 75,
+//     name: "Nettie Hancock"
+//   }]
+
+// Task 3
+//  Find all the names who failed the exams (Array methods)
+// Expected Output
+//   ["Yvette Merritt",
+//   "Mccall Carter",
+//   "Pate Collier",
+//   "Hatfield Hodge"
+// ];
+
+    </script>
+</body>
+</html>
